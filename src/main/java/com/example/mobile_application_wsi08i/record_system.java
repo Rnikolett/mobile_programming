@@ -91,7 +91,7 @@ public class record_system extends AppCompatActivity {
         Help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String message = "Az azonosító számnak 6 számjegyből kell állnia.\nA törléshez adja meg a megfelelő Könyv címét";
+                String message = "Az azonosító számnak 6 számjegyből kell állnia.\nA törléshez adja meg a megfelelő Könyv azonosítóját";
                 AlertDialog.Builder builder = new AlertDialog.Builder(record_system.this);
                 builder.setCancelable(true);
                 builder.setTitle("Help");

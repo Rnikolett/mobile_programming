@@ -54,4 +54,5 @@ public class DBHelper extends SQLiteOpenHelper {
         Cursor cursor = DB.rawQuery("Select * from Bookdetails", null);
         return cursor;
     }
+
 }
