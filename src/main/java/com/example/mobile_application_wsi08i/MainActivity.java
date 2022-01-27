@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     if (username.getText().toString().equals(res.getString(0))  && password.getText().toString().equals(res.getString(1))) {
                         openRecordSystem();
                         Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
+                        break;
                     }
                 }
             }
@@ -51,10 +52,11 @@ public class MainActivity extends AppCompatActivity {
                 String psw = password.getText().toString();
 
                     if (user.length() != 0){
-                        if(psw.length() != 0){
+                        if(psw.length() >= 4){
                             DB.insertuserdata(user, psw);
                             Toast.makeText(MainActivity.this, "User inserted, you can login now", Toast.LENGTH_SHORT).show();
-                        }
+                        }else
+                            Toast.makeText(MainActivity.this, "Password too short", Toast.LENGTH_SHORT).show();
                     }else
                         Toast.makeText(MainActivity.this, "User cannot be made", Toast.LENGTH_SHORT).show();
 
